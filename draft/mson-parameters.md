@@ -1,6 +1,6 @@
 ---
 RFC: XXXX
-Author: Z – Zdenek Nemec
+Author: Z
 Status: Draft
 Created: 2015-09-23
 Last Modified: 2015-09-23
@@ -39,14 +39,15 @@ The implementation should assume the existing syntax for API Blueprint
 [parameter section][] is – similarly to attributes section – an
 [MSON type declaration][].
 
-The type being declared inherits from Refract [API Description Namespace][]
-[Href Variables][] type unless specified otherwise. However – if another base
-type is specified – it has to be of the `Href Variables` type.
+The type being declared should inherits from Refract
+[API Description Namespace][] [Href Variables][] type unless specified
+otherwise. If another base type is specified – it has to be of the
+`Href Variables` base type.
 
 The `Href Variables` base type should be available as a type for us within the
 [data structures section][].
 
-For example:
+Example:
 
 ```apib
 # Resource [/resource/{p}{?q}]
@@ -55,7 +56,7 @@ For example:
     - q
 ```
 
-should be equal to:
+Equals to:
 
 ```apib
 # Resource [/resource/{p}{?q}]
@@ -64,7 +65,7 @@ should be equal to:
     - q
 ```
 
-this can be also achieved with:
+Split previous example for reusability:
 
 ```apib
 # Resource [/resource/{p}{?q}]
@@ -78,24 +79,41 @@ this can be also achieved with:
 
 ## Considerations
 
-### Name of the Parameters type
+### Name of the Parameters base type
 
-While we can use existing `Href Variables` base type we can also consider using
-another type name (that would still be of `Href Variables` base type).
+While we can use existing `Href Variables` base type we may also consider using
+another type name (that should still be of the `Href Variables` base type).
 
 ### Parameters base type constraints
 
-Obviously using any type in as a member type in a descendant of Parameters base
+Using any type in as a member type in a descendant of Parameters base
 type may lead into problems while representing its value in URL. We may consider
-using  `application/x-www-form-urlencoded` in these cases.
+using  `application/x-www-form-urlencoded` together with
+[W3C HTML JSON form submission][].
+
+Fore example:
+
+```apib
+# Resource [/resource{?q}]
+- Parameters
+    - q (object)
+        - member1: one
+        - member2: two
+```
+
+Would result into:
+
+```
+/resource?p%5Bmember1%5D=one&p%5Bmember2%5D=two
+```
+
+Alternatively, parser implementation may consider producing a warning in
+situations where member base type may cause an issue.
 
 ### Interoperability with other Data Structures
 
-While the Parameters base type should be usable in other data structures
-through an API Blueprint file the interoperability should focus on member-level.
-
-That is, a member of a data structure type reused as member of Parameter-based
-type.
+It should be possible to use any MSON data structures – named type – as a member
+type of Parameter-based type.
 
 For example:
 
@@ -103,7 +121,7 @@ For example:
 # Data Structures
 
 ## Date (string)
-Date as defined in ISO 8601
+Date as defined in ISO 8601.
 
 ### Sample
 2015-09-20
@@ -127,3 +145,4 @@ syntax currently in use.
 [API Description Namespace]: https://github.com/refractproject/refract-spec/blob/master/namespaces/api-description-namespace.md
 [Href Variables]: https://github.com/refractproject/refract-spec/blob/master/namespaces/api-description-namespace.md#href-variables-object-type
 [data structures section]: https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md#def-data-structures
+[W3C HTML JSON form submission]: http://www.w3.org/TR/html-json-forms/#the-application-json-encoding-algorithm
