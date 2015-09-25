@@ -39,7 +39,7 @@ The implementation should assume the existing syntax for API Blueprint
 [parameter section][] is – similarly to attributes section – an
 [MSON type declaration][].
 
-The type being declared should inherits from Refract
+The type being declared should inherit from the Refract
 [API Description Namespace][] [Href Variables][] type unless specified
 otherwise. If another base type is specified – it has to be of the
 `Href Variables` base type.
@@ -104,7 +104,7 @@ Fore example:
 Would result into:
 
 ```
-/resource?p%5Bmember1%5D=one&p%5Bmember2%5D=two
+/resource?q%5Bmember1%5D=one&p%5Bmember2%5D=two
 ```
 
 Alternatively, parser implementation may consider producing a warning in
