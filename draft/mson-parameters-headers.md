@@ -177,14 +177,19 @@ type of Parameters or Headers-based type.
 #### Example
 
 ```apib
-# Resource [/resource{?created}]
-+ Parameters
-    + created (Date)
+# My Resource [/resource{?created_after}]
++ Attributes
+    + created (Date) - Date when the resource was created
 
 ## Retrieve [GET]
-+ Response 200
++ Parameters
+    + created_after (Date, optional) - Retrieve only resources created after this date
+
++ Response 200 (application/json)
     + Headers
-        + Date (Date)
+        + Date (Date) - Date at which the message was originated
+
+    + Attributes (My Resource)
 
 # Data Structures
 
@@ -192,7 +197,7 @@ type of Parameters or Headers-based type.
 Date as defined in ISO 8601.
 
 ### Sample
-2015-09-20
+Tue, 15 Nov 1994 08:12:31 GMT
 ```
 
 ## Backwards Compatibility
