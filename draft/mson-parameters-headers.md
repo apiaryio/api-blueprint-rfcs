@@ -177,13 +177,13 @@ type of Parameters or Headers-based type.
 #### Example
 
 ```apib
-# My Resource [/resource{?created_after}]
+# My Resource [/resource{?createdAfter}]
 + Attributes
     + created (Date) - Date when the resource was created
 
 ## Retrieve [GET]
 + Parameters
-    + created_after (Date, optional) - Retrieve only resources created after this date
+    + createdAfter (Date, optional) - Retrieve only resources created after this date
 
 + Response 200 (application/json)
     + Headers
