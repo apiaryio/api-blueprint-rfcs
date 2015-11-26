@@ -1,5 +1,5 @@
 ---
-RFC: XXXX
+RFC: 0003
 Author: Kyle Fuller
 Status: Draft
 Created: 2015-09-22
