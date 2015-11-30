@@ -61,37 +61,3 @@ previous parameter definition.
             { "question": "Favourite programming language?" }
         ]
 ```
-
-## Backwards Compatibility
-
-The proposed design can already be expressed within the API Description
-namespace of Refract. The `href` attribute within an `HTTP Request Message`
-contains a concrete URI for the request which should be expanded from the
-request URI Parameters within an API Blueprint.
-
-As an example, the following API Blueprint snippet may be expressed as
-a Refract element without any changes to the Refract namespace:
-
-```apib
-### Search for a question [GET /questions{?query}]
-
-+ Request
-    + Parameters
-        + query: language
-```
-
-Or, as an `httpRequest` Refract element:
-
-```json
-{
-  "element": "httpRequest",
-  "attributes": {
-    "method": "GET",
-    "href": "https://polls.apiblueprint.org/questions?query=language"
-  },
-  "content": []
-}
-```
-
-All tooling that supports the Refract API Description namespace may support
-this proposal without any changes.
