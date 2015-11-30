@@ -1,12 +1,12 @@
 ---
-RFC: XXXX
+RFC: 0004
 Author: Kyle Fuller
 Status: Draft
 Created: 2015-11-20
-Last Modified: 2015-11-23
+Last Modified: 2015-11-30
 ---
 
-# API Blueprint RFC XXXX: Request Parameters
+# API Blueprint RFC 0004: Request Parameters
 
 ## Table of Contents
 
