@@ -6,7 +6,7 @@ Created: 2015-09-22
 Last Modified: 2015-09-28
 ---
 
-# API Blueprint RFC XXXX: Basic Authentication Scheme
+# API Blueprint RFC 0003: Basic Authentication Scheme
 
 ## Table of Contents
 
