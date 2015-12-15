@@ -1,7 +1,7 @@
 ---
 RFC: 0004
 Author: Kyle Fuller
-Status: Draft
+Status: Accepted
 Created: 2015-11-20
 Last Modified: 2015-11-30
 ---
