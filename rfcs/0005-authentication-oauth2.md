@@ -1,12 +1,12 @@
 ---
-RFC: XXXX
+RFC: 5
 Author: Kyle Fuller
 Status: Draft
 Created: 2015-09-28
 Last Modified: 2015-09-29
 ---
 
-# API Blueprint RFC XXXX: OAuth 2 Authentication Scheme
+# API Blueprint RFC 5: OAuth 2 Authentication Scheme
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ Last Modified: 2015-09-29
 ## Abstract
 
 This RFC adds the "OAuth 2" authentication scheme for the Authentication
-framework proposed in RFC XXXX. OAuth 2 is defined in
+framework proposed in RFC 2. OAuth 2 is defined in
 [RFC 6749](http://tools.ietf.org/html/rfc6749).
 
 ## Motivation

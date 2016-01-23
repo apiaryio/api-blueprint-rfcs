@@ -1,12 +1,12 @@
 ---
-RFC: 0003
+RFC: 3
 Author: Kyle Fuller
 Status: Draft
 Created: 2015-09-22
 Last Modified: 2015-09-28
 ---
 
-# API Blueprint RFC 0003: Basic Authentication Scheme
+# API Blueprint RFC 3: Basic Authentication Scheme
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ Last Modified: 2015-09-28
 ## Abstract
 
 This RFC adds the "Basic" authentication scheme for the Authentication
-framework proposed in RFC 0002.
+framework proposed in RFC 2.
 
 ## Motivation
 

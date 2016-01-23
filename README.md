@@ -21,7 +21,7 @@ parser, one must first get an RFC relevant to that feature merged and accepted
 into the RFC repository as a markdown file. At that point the RFC is 'active'
 and may be implemented with the goal of eventual inclusion into API Blueprint.
 
-Please see [RFC 1](final/0001-rfc-process.md) for more details.
+Please see [RFC 1](rfcs/0001-rfc-process.md) for more details.
 
 ## Related
 
