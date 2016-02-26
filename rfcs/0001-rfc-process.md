@@ -3,7 +3,7 @@ RFC: 1
 Author: Kyle Fuller
 Status: Final
 Created: 2015-09-21
-Last Modified: 2015-09-21
+Last Modified: 2016-01-26
 ---
 
 # API Blueprint RFC 1: RFC Template
@@ -63,7 +63,7 @@ A draft RFC should be presented in the form of a pull request to the API
 Blueprint RFC repository.
 
 1. Fork the API Blueprint RFC repository
-2. Copy `template.md` to the `draft` directory and rename it to to reflect the
+2. Copy `template.md` to the `rfcs` directory and rename it to to reflect the
    title of the RFC. For example, if the RFC was to propose the ability to
    define headers using MSON, then the title may be "MSON Headers" and the
    filename would become `mson-headers.md`.
@@ -98,8 +98,7 @@ Author should just update the draft RFC directly.
 ### Review & Resolution
 
 Once the author has completed the RFC, the API Blueprint team will review and
-finally change the RFCs status to accepted, in which it is moved from the
-`draft` directory into the `accepted` directory.
+finally change the RFCs status to accepted.
 
 For a RFC to be accepted it must meet certain minimum criteria. It must be a
 clear and complete description of the proposed change.
@@ -108,6 +107,4 @@ clear and complete description of the proposed change.
 
 Finally, once an RFC has been accepted, the implementation must be completed.
 When the implementation is complete and incorporated into the API Blueprint
-specification and any related parsers. The status will be changed to "Final"
-and the RFC will be moved to the `final` directory.
-
+specification and any related parsers. The status will be changed to "Final".

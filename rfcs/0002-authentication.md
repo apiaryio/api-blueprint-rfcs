@@ -1,12 +1,12 @@
 ---
-RFC: 0002
+RFC: 2
 Author: Kyle Fuller
 Status: Draft
 Created: 2015-09-22
 Last Modified: 2015-10-22
 ---
 
-# API Blueprint RFC 0002: Authentication Framework
+# API Blueprint RFC 2: Authentication Framework
 
 ## Table of Contents
 
