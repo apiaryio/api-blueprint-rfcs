@@ -37,7 +37,7 @@ Here is an example:
 ```apib
 # Group Authorized resources
 
-# Common Data
+## Common Data
 
 + Response 401
 
@@ -73,11 +73,11 @@ It is possible to have several "Common Data" sections:
 ```apib
 # Group Authorized resources
 
-# Common Data
+## Common Data
 
 + Response 401
 
-# Common Data
+## Common Data
 
 + Response 500
 
@@ -117,7 +117,7 @@ groups, but not neighbors:
 ```apib
 # Group Authorized resources
 
-# Common Data
+## Common Data
 
 + Response 401
 
