@@ -238,6 +238,32 @@ Authorized
 + Response 200
 ```
 
+It is possible to disable prototype for one particular action:
+
+```apib
+## Prototype Authorized
+
++ Response 401
+
+After previous line all actions will have 401 response
+
+# Group Authorized resources
+
+## Posts [GET /posts]
+
++ Response 200
+
+# Group Authorization
+
+## Auth [POST /auth]
+
+Disable prototype Authorized only for this action
+
++ Unuse Prototype Authorized
+
++ Response 200
+```
+
 ## Backwards Compatibility
 
 If anyone use "Common Data" or "Prototype" headers in the documentation after
