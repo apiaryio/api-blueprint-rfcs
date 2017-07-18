@@ -165,13 +165,13 @@ proposed syntax:
 + name: `John Smith` (string, required)
 + email: `user@example.com` (string, required)
 
-## Authorized
+## Authorized (Resource Prototype)
 
 + Response 403 (application/json)
     + Attributes
         + status: forbidden (string, required, fixed)
 
-## Common Resource
+## Common Resource (Resource Prototype)
 
 + Response 429 (application/json)
     + Attributes
@@ -211,12 +211,12 @@ proposed syntax:
 ```
 
 In `Data Structures` section two prototypes were defined: `Common Resource`
-and `Authorized`. Both of them have some responses. To assign prototype for all
-resources of resource group you need to use such syntax: `Section name
-(Prototype Name)`. If section has nested section then all resources of nested
-section will have responses defined in prototype. `Users` resource group will
-have responces from `Common Resource` prototype (because it's a prototype of its
-parent group) and from `Authorized` prototype.
+and `Authorized` with base type `Resource Prototype`.  Both of them have some
+responses. To assign prototype for all resources of resource group you need to
+use such syntax: `Section name (Prototype Name)`. If section has nested section
+then all resources of nested section will have responses defined in prototype.
+`Users` resource group will have responces from `Common Resource` prototype
+(because it's a prototype of its parent group) and from `Authorized` prototype.
 
 It is possible to assign several prototypes for one resource or resource group:
 
