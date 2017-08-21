@@ -165,13 +165,15 @@ proposed syntax:
 + name: `John Smith` (string, required)
 + email: `user@example.com` (string, required)
 
-## Authorized (Resource Prototype)
+# Resource Prototypes
+
+## Authorized
 
 + Response 403 (application/json)
     + Attributes
         + status: forbidden (string, required, fixed)
 
-## Common Resource (Resource Prototype)
+## Common Resource
 
 + Response 429 (application/json)
     + Attributes
@@ -210,13 +212,20 @@ proposed syntax:
     + Attributes (User, required)
 ```
 
-In `Data Structures` section two prototypes were defined: `Common Resource`
-and `Authorized` with base type `Resource Prototype`.  Both of them have some
-responses. To assign prototype for all resources of resource group you need to
-use such syntax: `Section name (Prototype Name)`. If section has nested section
-then all resources of nested section will have responses defined in prototype.
-`Users` resource group will have responces from `Common Resource` prototype
-(because it's a prototype of its parent group) and from `Authorized` prototype.
+New section `Resource Prototypes` proposed. It is simmilar to
+[Data Structures](https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md#def-data-structures)
+but contains resource prototypes instead of MSON data structures. It's important
+to create new separate section for resource prototypes, because data format of
+MSON data structures and resource prototypes differes a lot so separate section
+will help users to read API description easier.
+
+In `Resource Prototypes` section two prototypes were defined: `Common Resource`
+and `Authorized`.  Both of them have some responses. To assign prototype for all
+resources of resource group you need to use such syntax:
+`Section name (Prototype Name)`. If section has nested section then all
+resources of nested section will have responses defined in prototype. `Users`
+resource group will have responces from `Common Resource` prototype (because
+it's a prototype of its parent group) and from `Authorized` prototype.
 
 It is possible to assign several prototypes for one resource or resource group:
 
@@ -227,7 +236,7 @@ It is possible to assign several prototypes for one resource or resource group:
 It is possible when one prototype has its own prototype:
 
 ```apib
-# Data Structures
+# Resource Prototypes
 
 ## Common Resource (Rate, Format)
 ```
