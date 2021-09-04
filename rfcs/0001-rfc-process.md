@@ -97,7 +97,7 @@ Author should just update the draft RFC directly.
 
 ### Review & Resolution
 
-Once the author has completed the RFC, the API Blueprint team will review and
+Once the author has completed the RFC, the API Blueprint team will review and 
 finally change the RFCs status to accepted.
 
 For a RFC to be accepted it must meet certain minimum criteria. It must be a
